@@ -29,9 +29,7 @@ from langchain.embeddings import HuggingFaceEmbeddings
 from langchain.docstore.document import Document
 from constants import CHROMA_SETTINGS
 
-
 load_dotenv()
-
 
 # Load environment variables
 persist_directory = os.environ.get('PERSIST_DIRECTORY')
@@ -40,7 +38,6 @@ source_directory = os.environ.get('SOURCE_DIRECTORY', 'source_documents')
 embeddings_model_name = os.environ.get('EMBEDDINGS_MODEL_NAME')
 chunk_size = 500
 chunk_overlap = 50
-
 
 # Custom document loaders
 class MyElmLoader(UnstructuredEmailLoader):
@@ -163,7 +160,7 @@ def main():
     db.persist()
     db = None
 
-    print(f"Ingestion complete! You can now run privateGPT.py to query your documents")
+    print(f"Ingestion complete! You can now query your documents")
 
 
 if __name__ == "__main__":
