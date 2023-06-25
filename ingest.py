@@ -12,7 +12,7 @@ from tqdm import tqdm
 from langchain.document_loaders import (
     CSVLoader,
     EverNoteLoader,
-    PDFMinerLoader,
+    PyMuPDFLoader,
     TextLoader,
     UnstructuredEmailLoader,
     UnstructuredEPubLoader,
@@ -77,7 +77,7 @@ LOADER_MAPPING = {
     ".html": (UnstructuredHTMLLoader, {}),
     ".md": (UnstructuredMarkdownLoader, {}),
     ".odt": (UnstructuredODTLoader, {}),
-    ".pdf": (PDFMinerLoader, {}),
+    ".pdf": (PyMuPDFLoader, {}),
     ".ppt": (UnstructuredPowerPointLoader, {}),
     ".pptx": (UnstructuredPowerPointLoader, {}),
     ".txt": (TextLoader, {"encoding": "utf8"}),
